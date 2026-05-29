@@ -1,0 +1,76 @@
+<!DOCTYPE html> <!-- تعريف نوع ملف الصفحة -->
+<html lang="ar" dir="rtl"> <!-- بداية الصفحة باللغة العربية -->
+<head> <!-- بداية معلومات الصفحة -->
+  <meta charset="UTF-8"> <!-- دعم اللغة العربية والانجليزية -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- يجعل الموقع مناسب للموبايل واللاب -->
+  <title>MOSIQATI | Services</title> <!-- عنوان الصفحة في المتصفح -->
+  <link rel="stylesheet" href="style.css"> <!-- ربط ملف التصميم -->
+</head> <!-- نهاية معلومات الصفحة -->
+<body> <!-- بداية جسم الصفحة -->
+<div class="top-bar" data-ar="🎵 توصيل داخل الاردن | عروض خاصة | استشارات وصيانة" data-en="🎵 Delivery in Jordan | Special offers | Advice and maintenance">🎵 توصيل داخل الاردن | عروض خاصة | استشارات وصيانة</div> <!-- شريط علوي مثل مواقع المتاجر الاحترافية -->
+<header class="site-header"> <!-- بداية الهيدر الثابت -->
+  <a class="brand" href="index.html" onclick="playClick()"> <!-- رابط الشعار يرجع للرئيسية -->
+    <img src="assets/لقطة شاشة 2026-05-25 151001.png" alt="شعار موسيقاتي"> <!-- صورة الشعار -->
+    <span data-ar="موسيقاتي" data-en="MOSIQATI">موسيقاتي</span> <!-- اسم المتجر بلغتين -->
+  </a> <!-- نهاية الشعار -->
+  <input id="searchBox" class="search" type="search" onkeyup="searchCards()" placeholder="ابحث عن منتج او خدمة" data-ph-ar="ابحث عن منتج او خدمة" data-ph-en="Search for product or service"> <!-- مربع البحث -->
+  <button class="menu-btn" onclick="toggleMenu();playClick()">☰</button> <!-- زر قائمة الجوال -->
+  <nav id="mainNav" class="main-nav"> <!-- روابط التنقل -->
+    <a href="index.html" onclick="playClick()" data-ar="الرئيسية" data-en="Home">الرئيسية</a> <!-- رابط الرئيسية -->
+    <a href="store.html" onclick="playClick()" data-ar="المتجر" data-en="Store">المتجر</a> <!-- رابط المتجر -->
+    <a href="gifts.html" onclick="playClick()" data-ar="الهدايا" data-en="Gifts">الهدايا</a> <!-- رابط الهدايا -->
+    <a href="offers.html" onclick="playClick()" data-ar="العروض" data-en="Offers">العروض</a> <!-- رابط العروض -->
+    <a href="services.html" onclick="playClick()" data-ar="الخدمات" data-en="Services">الخدمات</a> <!-- رابط الخدمات -->
+    <a href="about.html" onclick="playClick()" data-ar="من نحن" data-en="About">من نحن</a> <!-- رابط من نحن -->
+    <a href="contact.html" onclick="playClick()" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a> <!-- رابط التواصل -->
+    <a href="cart.html" onclick="playClick()" data-ar="السلة 🛒" data-en="Cart 🛒">السلة 🛒 <b id="cartCount">0</b></a> <!-- رابط السلة مع العدد -->
+  </nav> <!-- نهاية روابط التنقل -->
+</header> <!-- نهاية الهيدر -->
+<div class="tool-row"> <!-- شريط ادوات التحكم المطلوبة -->
+  <button onclick="toggleTheme();playClick()" data-ar="ليلي نهاري" data-en="Dark Light">ليلي نهاري</button> <!-- زر الوضع الليلي والنهاري -->
+  <button onclick="setLang('ar');playClick()">عربي</button> <!-- زر اللغة العربية -->
+  <button onclick="setLang('en');playClick()">English</button> <!-- زر اللغة الانجليزية -->
+  <button onclick="changeFont(1);playClick()">A+</button> <!-- زر تكبير الخط -->
+  <button onclick="changeFont(-1);playClick()">A-</button> <!-- زر تصغير الخط -->
+</div> <!-- نهاية شريط الادوات -->
+<main class="container"> <!-- بداية صفحة الخدمات -->
+<section class="page-head section-card"> <!-- رأس صفحة الخدمات -->
+  <h1 data-ar="الخدمات" data-en="Services">الخدمات</h1> <!-- عنوان الخدمات -->
+  <p data-ar="اختاري استشارة او صيانة واكتبي الاسم والمشكلة" data-en="Choose advice or maintenance and write your name and issue">اختاري استشارة او صيانة واكتبي الاسم والمشكلة</p> <!-- وصف الصفحة -->
+</section> <!-- نهاية رأس الصفحة -->
+<section class="grid three"> <!-- بطاقات تعريف الخدمات -->
+  <article class="card searchable"><img src="assets\910d801e6fa8ec611f8d997096288a19.jpg "><h3 data-ar="صيانة الالات" data-en="Maintenance">صيانة الالات</h3><p data-ar="فحص وتنظيف وضبط اوتار" data-en="Check clean and tune instruments">فحص وتنظيف وضبط اوتار</p></article> <!-- بطاقة الصيانة -->
+  <article class="card searchable"><img src="assets\photo_5812074621581331831_y.jpg"><h3 data-ar="استشارة شراء" data-en="Buying advice">استشارة شراء</h3><p data-ar="نساعدك تختار الالة المناسبة" data-en="We help you choose the right instrument">نساعدك تختار الالة المناسبة</p></article> <!-- بطاقة الاستشارة -->
+  <article class="card searchable"><img src="assets\photo_5812074621581331830_y.jpg"><h3 data-ar="تجهيز استوديو" data-en="Studio setup">تجهيز استوديو</h3><p data-ar="اقتراح معدات تسجيل ومكساج" data-en="Recording and mixing setup suggestions">اقتراح معدات تسجيل ومكساج</p></article> <!-- بطاقة الاستوديو -->
+</section> <!-- نهاية البطاقات -->
+<section class="form-card section-card"> <!-- نموذج طلب الخدمة -->
+  <h2 data-ar="نموذج طلب خدمة" data-en="Service request form">نموذج طلب خدمة</h2> <!-- عنوان النموذج -->
+  <form onsubmit="sendService(event)"> <!-- عند الارسال نشغل دالة الخدمة -->
+    <label data-ar="نوع الخدمة" data-en="Service type">نوع الخدمة</label> <!-- عنوان اختيار الخدمة -->
+    <select id="serviceType" required> <!-- قائمة نوع الخدمة -->
+      <option value="استشارة" data-ar="استشارة" data-en="Advice">استشارة</option> <!-- خيار الاستشارة -->
+      <option value="صيانة" data-ar="صيانة" data-en="Maintenance">صيانة</option> <!-- خيار الصيانة -->
+    </select> <!-- نهاية القائمة -->
+    <label data-ar="الاسم" data-en="Name">الاسم</label> <!-- عنوان الاسم -->
+    <input id="serviceName" required placeholder="اكتبي اسمك" data-ph-ar="اكتبي اسمك" data-ph-en="Write your name"> <!-- حقل الاسم -->
+    <label data-ar="رقم الهاتف" data-en="Phone">رقم الهاتف</label> <!-- عنوان الهاتف -->
+    <input id="servicePhone" required placeholder="اكتبي رقم الهاتف" data-ph-ar="اكتبي رقم الهاتف" data-ph-en="Write phone number"> <!-- حقل الهاتف -->
+    <label data-ar="المشكلة او الطلب" data-en="Issue or request">المشكلة او الطلب</label> <!-- عنوان المشكلة -->
+    <textarea id="serviceProblem" required placeholder="اكتبي المشكلة بالتفصيل" data-ph-ar="اكتبي المشكلة بالتفصيل" data-ph-en="Write the issue in detail"></textarea> <!-- حقل المشكلة -->
+    <button type="submit" data-ar="ارسال الطلب" data-en="Send request">ارسال الطلب</button> <!-- زر الارسال -->
+  </form> <!-- نهاية النموذج -->
+  <div id="serviceResult" class="result-box"></div> <!-- هنا تظهر نتيجة الطلب -->
+</section> <!-- نهاية نموذج الخدمة -->
+</main> <!-- نهاية صفحة الخدمات -->
+<footer class="footer"> <!-- بداية الفوتر -->
+  <h2 data-ar="موسيقاتي MOSIQATI" data-en="MOSIQATI Music Store">موسيقاتي MOSIQATI</h2> <!-- اسم المتجر في الفوتر -->
+  <p data-ar="متجر اردني للالات الموسيقية والهدايا والخدمات الفنية" data-en="Jordanian store for musical instruments gifts and technical services">متجر اردني للالات الموسيقية والهدايا والخدمات الفنية</p> <!-- وصف قصير -->
+  <div class="social"> <!-- روابط تواصل شكلية -->
+    <span>Facebook</span><span>Instagram</span><span>WhatsApp</span> <!-- اسماء المنصات -->
+  </div> <!-- نهاية روابط التواصل -->
+</footer> <!-- نهاية الفوتر -->
+<audio id="clickSound" src="assets/c2.mp3" preload="auto"></audio> <!-- صوت قصير عند الضغط -->
+<audio id="heroMusic" src="assets/hhh.mp3" preload="auto" loop></audio> <!-- موسيقى اختيارية للعرض -->
+<script src="script.js"></script> <!-- ربط ملف الجافاسكربت -->
+</body> <!-- نهاية جسم الصفحة -->
+</html> <!-- نهاية الصفحة -->

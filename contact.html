@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- تعريف نوع ملف الصفحة -->
+<html lang="ar" dir="rtl"> <!-- بداية الصفحة باللغة العربية -->
+<head> <!-- بداية معلومات الصفحة -->
+  <meta charset="UTF-8"> <!-- دعم اللغة العربية والانجليزية -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- يجعل الموقع مناسب للموبايل واللاب -->
+  <title>MOSIQATI | Contact</title> <!-- عنوان الصفحة في المتصفح -->
+  <link rel="stylesheet" href="style.css"> <!-- ربط ملف التصميم -->
+</head> <!-- نهاية معلومات الصفحة -->
+<body> <!-- بداية جسم الصفحة -->
+<div class="top-bar" data-ar="🎵 توصيل داخل الاردن | عروض خاصة | استشارات وصيانة" data-en="🎵 Delivery in Jordan | Special offers | Advice and maintenance">🎵 توصيل داخل الاردن | عروض خاصة | استشارات وصيانة</div> <!-- شريط علوي مثل مواقع المتاجر الاحترافية -->
+<header class="site-header"> <!-- بداية الهيدر الثابت -->
+  <a class="brand" href="index.html" onclick="playClick()"> <!-- رابط الشعار يرجع للرئيسية -->
+    <img src="assets/لقطة شاشة 2026-05-25 151001.png" alt="شعار موسيقاتي"> <!-- صورة الشعار -->
+    <span data-ar="موسيقاتي" data-en="MOSIQATI">موسيقاتي</span> <!-- اسم المتجر بلغتين -->
+  </a> <!-- نهاية الشعار -->
+  <input id="searchBox" class="search" type="search" onkeyup="searchCards()" placeholder="ابحث عن منتج او خدمة" data-ph-ar="ابحث عن منتج او خدمة" data-ph-en="Search for product or service"> <!-- مربع البحث -->
+  <button class="menu-btn" onclick="toggleMenu();playClick()">☰</button> <!-- زر قائمة الجوال -->
+  <nav id="mainNav" class="main-nav"> <!-- روابط التنقل -->
+    <a href="index.html" onclick="playClick()" data-ar="الرئيسية" data-en="Home">الرئيسية</a> <!-- رابط الرئيسية -->
+    <a href="store.html" onclick="playClick()" data-ar="المتجر" data-en="Store">المتجر</a> <!-- رابط المتجر -->
+    <a href="gifts.html" onclick="playClick()" data-ar="الهدايا" data-en="Gifts">الهدايا</a> <!-- رابط الهدايا -->
+    <a href="offers.html" onclick="playClick()" data-ar="العروض" data-en="Offers">العروض</a> <!-- رابط العروض -->
+    <a href="services.html" onclick="playClick()" data-ar="الخدمات" data-en="Services">الخدمات</a> <!-- رابط الخدمات -->
+    <a href="about.html" onclick="playClick()" data-ar="من نحن" data-en="About">من نحن</a> <!-- رابط من نحن -->
+    <a href="contact.html" onclick="playClick()" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a> <!-- رابط التواصل -->
+    <a href="cart.html" onclick="playClick()" data-ar="السلة 🛒" data-en="Cart 🛒">السلة 🛒 <b id="cartCount">0</b></a> <!-- رابط السلة مع العدد -->
+  </nav> <!-- نهاية روابط التنقل -->
+</header> <!-- نهاية الهيدر -->
+<div class="tool-row"> <!-- شريط ادوات التحكم المطلوبة -->
+  <button onclick="toggleTheme();playClick()" data-ar="ليلي نهاري" data-en="Dark Light">ليلي نهاري</button> <!-- زر الوضع الليلي والنهاري -->
+  <button onclick="setLang('ar');playClick()">عربي</button> <!-- زر اللغة العربية -->
+  <button onclick="setLang('en');playClick()">English</button> <!-- زر اللغة الانجليزية -->
+  <button onclick="changeFont(1);playClick()">A+</button> <!-- زر تكبير الخط -->
+  <button onclick="changeFont(-1);playClick()">A-</button> <!-- زر تصغير الخط -->
+</div> <!-- نهاية شريط الادوات -->
+<main class="container"> <!-- بداية صفحة التواصل -->
+<section class="page-head section-card"><h1 data-ar="تواصل معنا" data-en="Contact us">تواصل معنا</h1><p data-ar="نموذج تواصل وقنوات السوشال ميديا" data-en="Contact form and social media channels">نموذج تواصل وقنوات السوشال ميديا</p></section> <!-- رأس التواصل -->
+<section class="form-card section-card"> <!-- نموذج التواصل -->
+  <form onsubmit="sendMessage(event)"> <!-- تشغيل دالة الارسال -->
+    <input required placeholder="الاسم" data-ph-ar="الاسم" data-ph-en="Name"> <!-- حقل الاسم -->
+    <input required type="email" placeholder="الايميل" data-ph-ar="الايميل" data-ph-en="Email"> <!-- حقل الايميل -->
+    <textarea required placeholder="الرسالة" data-ph-ar="الرسالة" data-ph-en="Message"></textarea> <!-- حقل الرسالة -->
+    <button type="submit" data-ar="ارسال" data-en="Send">ارسال</button> <!-- زر ارسال -->
+  </form> <!-- نهاية النموذج -->
+  <p id="formMsg"></p> <!-- رسالة نجاح -->
+</section> <!-- نهاية التواصل -->
+</main> <!-- نهاية صفحة التواصل -->
+<footer class="footer"> <!-- بداية الفوتر -->
+  <h2 data-ar="موسيقاتي MOSIQATI" data-en="MOSIQATI Music Store">موسيقاتي MOSIQATI</h2> <!-- اسم المتجر في الفوتر -->
+  <p data-ar="متجر اردني للالات الموسيقية والهدايا والخدمات الفنية" data-en="Jordanian store for musical instruments gifts and technical services">متجر اردني للالات الموسيقية والهدايا والخدمات الفنية</p> <!-- وصف قصير -->
+  <div class="social"> <!-- روابط تواصل شكلية -->
+    <span>Facebook</span><span>Instagram</span><span>WhatsApp</span> <!-- اسماء المنصات -->
+  </div> <!-- نهاية روابط التواصل -->
+</footer> <!-- نهاية الفوتر -->
+<audio id="clickSound" src="assets/c2.mp3" preload="auto"></audio> <!-- صوت قصير عند الضغط -->
+<audio id="heroMusic" src="assets/hhh.mp3" preload="auto" loop></audio> <!-- موسيقى اختيارية للعرض -->
+<script src="script.js"></script> <!-- ربط ملف الجافاسكربت -->
+</body> <!-- نهاية جسم الصفحة -->
+</html> <!-- نهاية الصفحة -->

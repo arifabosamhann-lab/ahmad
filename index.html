@@ -1,0 +1,84 @@
+<!DOCTYPE html> <!-- تعريف نوع ملف الصفحة -->
+<html lang="ar" dir="rtl"> <!-- بداية الصفحة باللغة العربية -->
+<head> <!-- بداية معلومات الصفحة -->
+  <meta charset="UTF-8"> <!-- دعم اللغة العربية والانجليزية -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- يجعل الموقع مناسب للموبايل واللاب -->
+  <title>MOSIQATI | Home</title> <!-- عنوان الصفحة في المتصفح -->
+  <link rel="stylesheet" href="style.css"> <!-- ربط ملف التصميم -->
+</head> <!-- نهاية معلومات الصفحة -->
+<body> <!-- بداية جسم الصفحة -->
+<div class="top-bar" data-ar="🎵 توصيل داخل الاردن | عروض خاصة | استشارات وصيانة" data-en="🎵 Delivery in Jordan | Special offers | Advice and maintenance">🎵 توصيل داخل الاردن | عروض خاصة | استشارات وصيانة</div> <!-- شريط علوي مثل مواقع المتاجر الاحترافية -->
+<header class="site-header"> <!-- بداية الهيدر الثابت -->
+  <a class="brand" href="index.html" onclick="playClick()"> <!-- رابط الشعار يرجع للرئيسية -->
+    <img src="assets/لقطة شاشة 2026-05-25 151001.png"شعار موسيقاتي"> <!-- صورة الشعار -->
+    <span data-ar="موسيقاتي" data-en="MOSIQATI">موسيقاتي</span> <!-- اسم المتجر بلغتين -->
+  </a> <!-- نهاية الشعار -->
+  <input id="searchBox" class="search" type="search" onkeyup="searchCards()" placeholder="ابحث عن منتج او خدمة" data-ph-ar="ابحث عن منتج او خدمة" data-ph-en="Search for product or service"> <!-- مربع البحث -->
+  <button class="menu-btn" onclick="toggleMenu();playClick()">☰</button> <!-- زر قائمة الجوال -->
+  <nav id="mainNav" class="main-nav"> <!-- روابط التنقل -->
+    <a href="index.html" onclick="playClick()" data-ar="الرئيسية" data-en="Home">الرئيسية</a> <!-- رابط الرئيسية -->
+    <a href="store.html" onclick="playClick()" data-ar="المتجر" data-en="Store">المتجر</a> <!-- رابط المتجر -->
+    <a href="gifts.html" onclick="playClick()" data-ar="الهدايا" data-en="Gifts">الهدايا</a> <!-- رابط الهدايا -->
+    <a href="offers.html" onclick="playClick()" data-ar="العروض" data-en="Offers">العروض</a> <!-- رابط العروض -->
+    <a href="services.html" onclick="playClick()" data-ar="الخدمات" data-en="Services">الخدمات</a> <!-- رابط الخدمات -->
+    <a href="about.html" onclick="playClick()" data-ar="من نحن" data-en="About">من نحن</a> <!-- رابط من نحن -->
+    <a href="contact.html" onclick="playClick()" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a> <!-- رابط التواصل -->
+    <a href="cart.html" onclick="playClick()" data-ar="السلة 🛒" data-en="Cart 🛒">السلة 🛒 <b id="cartCount">0</b></a> <!-- رابط السلة مع العدد -->
+  </nav> <!-- نهاية روابط التنقل -->
+</header> <!-- نهاية الهيدر -->
+<div class="tool-row"> <!-- شريط ادوات التحكم المطلوبة -->
+  <button onclick="toggleTheme();playClick()" data-ar="ليلي نهاري" data-en="Dark Light">ليلي نهاري</button> <!-- زر الوضع الليلي والنهاري -->
+  <button onclick="setLang('ar');playClick()">عربي</button> <!-- زر اللغة العربية -->
+  <button onclick="setLang('en');playClick()">English</button> <!-- زر اللغة الانجليزية -->
+  <button onclick="changeFont(1);playClick()">A+</button> <!-- زر تكبير الخط -->
+  <button onclick="changeFont(-1);playClick()">A-</button> <!-- زر تصغير الخط -->
+</div> <!-- نهاية شريط الادوات -->
+<main class="container"> <!-- بداية محتوى الصفحة الرئيسية -->
+<section class="hero"> <!-- قسم البطل الرئيسي مستوحى من Sweetwater -->
+  <div class="hero-text"> <!-- نص كبير فوق الصفحة -->
+    <p class="eyebrow" data-ar="تجربة موسيقية اردنية بامتياز" data-en="Jordanian music experience">تجربة موسيقية اردنية بامتياز</p> <!-- نص صغير -->
+    <h1 data-ar="موسيقاتي متجر الالات الموسيقية " data-en="MOSIQATI store for instruments gifts and services">موسيقاتي متجر الالات الموسيقية </h1> <!-- عنوان كبير -->
+    <p data-ar="نوفر  لك كل ما تحتاجه لتصنع لحنك الخاص" data-en="A modern website for products offers and services made for students and musicians">موقع حديث يعرض المنتجات والعروض والخدمات بطريقة سهلة ومناسبة للطلاب والموسيقيين</p> <!-- وصف -->
+    <a class="primary" href="store.html" onclick="playClick()" data-ar="تسوق الان" data-en="Shop now">تسوق الان</a> <!-- زر المتجر -->
+    <button class="primary ghost" onclick="toggleHeroMusic();playClick()" data-ar="تشغيل الموسيقى" data-en="Play music">تشغيل الموسيقى</button> <!-- زر تشغيل الموسيقى -->
+  </div> <!-- نهاية النص -->
+  <div class="hero-media"> <!-- مكان الصورة المتحركة -->
+    <video autoplay muted loop playsinline>
+  <source src=assets\e9d51f66cd45f378bb72233c9667bb13_240w.mp4   
+type="video/mp4">
+</video>
+  </div> <!-- نهاية الصورة المتحركة -->
+</section> <!-- نهاية البطل -->
+<section class="section-card promo"> <!-- قسم صورة متحركة اضافية -->
+  <video autoplay muted loop playsinline>
+  <source src="assets/document_5809745696579920417 copy.mp4" type="video/mp4">
+</video>
+  <div> <!-- نص بجانب الحركة -->
+    <h2 data-ar="تسوق بشغف" data-en="Animated promotion">تسوق بشغف</h2> <!-- عنوان -->
+  </div> <!-- نهاية النص -->
+</section> <!-- نهاية القسم -->
+<section class="grid three"> <!-- اقسام سريعة -->
+  <a class="feature searchable" href="store.html"><img src="assets\0f89fae42a25bf07ac2e2b344348d1d5.jpg"><h3 data-ar="الات موسيقية" data-en="Instruments">الات موسيقية</h3><p data-ar="عود قيثار بيانو درمز ومعدات استوديو" data-en="Oud guitar piano drums and studio gear">عود قيثار بيانو درمز ومعدات استوديو</p></a> <!-- بطاقة المتجر -->
+  <a class="feature searchable" href="offers.html"><img src="assets\image-1779794036518.png"><h3 data-ar="عروض خاصة" data-en="Special offers">عروض خاصة</h3><p data-ar="خصومات وباقات حصرية" data-en="Discounts and exclusive bundles">خصومات وباقات حصرية</p></a> <!-- بطاقة العروض -->
+  <a class="feature searchable" href="services.html"><img src="assets\61163e70-7ec8-40de-8758-b1d516ec44fc.jpg"><h3 data-ar="خدمات" data-en="Services">خدمات</h3><p data-ar="صيانة او استشارة شراء" data-en="Maintenance or buying advice">صيانة او استشارة شراء</p></a> <!-- بطاقة الخدمات -->
+</section> <!-- نهاية الاقسام -->
+<section class="section-card"> <!-- معرض يستخدم كل الصور -->
+  <h2 data-ar="معرض الاصول البصرية" data-en="Visual assets gallery">معرض الاصول البصرية</h2> <!-- عنوان المعرض -->
+  <p data-ar="تم وضع الصور داخل الموقع حتى تظهر الاصول بشكل احترافي" data-en="The visual assets are included professionally in the website">تم وضع الصور داخل الموقع حتى تظهر الاصول بشكل احترافي</p> <!-- وصف -->
+  <div class="asset-marquee"> <!-- شريط صور متحرك -->
+    <img src="assets/1.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/11.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/12.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/13.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/14.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/15.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/16.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/17.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/2.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/222.webp" alt="asset"> <!-- اصل بصري --><img src="assets/3.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/4.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/5.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/6.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/7.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/8.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/_.GIF" alt="asset"> <!-- اصل بصري --><img src="assets/a.png" alt="asset"> <!-- اصل بصري --><img src="assets/a1.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/a2.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/a3.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/a4.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/a_-_Copy.png" alt="asset"> <!-- اصل بصري --><img src="assets/e1.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/e2.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/e4.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/g1.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/g11.png" alt="asset"> <!-- اصل بصري --><img src="assets/g2.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/g20.png" alt="asset"> <!-- اصل بصري --><img src="assets/g4-6.png" alt="asset"> <!-- اصل بصري --><img src="assets/g4-6_-_Copy.png" alt="asset"> <!-- اصل بصري --><img src="assets/g4.jpg" alt="asset"> <!-- اصل بصري --><img src="assets/g41.png" alt="asset"> <!-- اصل بصري --><img src="assets/g50.png" alt="asset"> <!-- اصل بصري --><img src="assets/g61.png" alt="asset"> <!-- اصل بصري -->
+  </div> <!-- نهاية شريط الصور -->
+</section> <!-- نهاية المعرض -->
+</main> <!-- نهاية المحتوى -->
+<footer class="footer"> <!-- بداية الفوتر -->
+  <h2 data-ar="موسيقاتي MOSIQATI" data-en="MOSIQATI Music Store">موسيقاتي MOSIQATI</h2> <!-- اسم المتجر في الفوتر -->
+  <p data-ar="متجر اردني للالات الموسيقية والهدايا والخدمات الفنية" data-en="Jordanian store for musical instruments gifts and technical services">متجر اردني للالات الموسيقية والهدايا والخدمات الفنية</p> <!-- وصف قصير -->
+  <div class="social"> <!-- روابط تواصل شكلية -->
+    <span>Facebook</span><span>Instagram</span><span>WhatsApp <!-- اسماء المنصات -->
+  </div> <!-- نهاية روابط التواصل -->
+</footer> <!-- نهاية الفوتر -->
+<audio id="clickSound" src="assets/c2.mp3" preload="auto"></audio> <!-- صوت قصير عند الضغط -->
+<audio id="heroMusic" src="assets/hhh.mp3" preload="auto" loop></audio> <!-- موسيقى اختيارية للعرض -->
+<script src="script.js"></script> <!-- ربط ملف الجافاسكربت -->
+</body> <!-- نهاية جسم الصفحة -->
+</html> <!-- نهاية الصفحة -->

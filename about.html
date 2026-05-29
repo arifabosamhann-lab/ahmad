@@ -1,0 +1,89 @@
+<!DOCTYPE html> <!-- تعريف نوع ملف الصفحة -->
+<html lang="ar" dir="rtl"> <!-- بداية الصفحة باللغة العربية -->
+<head> <!-- بداية معلومات الصفحة -->
+  <meta charset="UTF-8"> <!-- دعم اللغة العربية والانجليزية -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- يجعل الموقع مناسب للموبايل واللاب -->
+  <title>MOSIQATI | About</title> <!-- عنوان الصفحة في المتصفح -->
+  <link rel="stylesheet" href="style.css"> <!-- ربط ملف التصميم -->
+</head> <!-- نهاية معلومات الصفحة -->
+<body> <!-- بداية جسم الصفحة -->
+<div class="top-bar" data-ar="🎵 توصيل داخل الاردن | عروض خاصة | استشارات وصيانة" data-en="🎵 Delivery in Jordan | Special offers | Advice and maintenance">🎵 توصيل داخل الاردن | عروض خاصة | استشارات وصيانة</div> <!-- شريط علوي مثل مواقع المتاجر الاحترافية -->
+<header class="site-header"> <!-- بداية الهيدر الثابت -->
+  <a class="brand" href="index.html" onclick="playClick()"> <!-- رابط الشعار يرجع للرئيسية -->
+    <img src="assets/لقطة شاشة 2026-05-25 151001.png" alt="شعار موسيقاتي"> <!-- صورة الشعار -->
+    <span data-ar="موسيقاتي" data-en="MOSIQATI">موسيقاتي</span> <!-- اسم المتجر بلغتين -->
+  </a> <!-- نهاية الشعار -->
+  <input id="searchBox" class="search" type="search" onkeyup="searchCards()" placeholder="ابحث عن منتج او خدمة" data-ph-ar="ابحث عن منتج او خدمة" data-ph-en="Search for product or service"> <!-- مربع البحث -->
+  <button class="menu-btn" onclick="toggleMenu();playClick()">☰</button> <!-- زر قائمة الجوال -->
+  <nav id="mainNav" class="main-nav"> <!-- روابط التنقل -->
+    <a href="index.html" onclick="playClick()" data-ar="الرئيسية" data-en="Home">الرئيسية</a> <!-- رابط الرئيسية -->
+    <a href="store.html" onclick="playClick()" data-ar="المتجر" data-en="Store">المتجر</a> <!-- رابط المتجر -->
+    <a href="gifts.html" onclick="playClick()" data-ar="الهدايا" data-en="Gifts">الهدايا</a> <!-- رابط الهدايا -->
+    <a href="offers.html" onclick="playClick()" data-ar="العروض" data-en="Offers">العروض</a> <!-- رابط العروض -->
+    <a href="services.html" onclick="playClick()" data-ar="الخدمات" data-en="Services">الخدمات</a> <!-- رابط الخدمات -->
+    <a href="about.html" onclick="playClick()" data-ar="من نحن" data-en="About">من نحن</a> <!-- رابط من نحن -->
+    <a href="contact.html" onclick="playClick()" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a> <!-- رابط التواصل -->
+    <a href="cart.html" onclick="playClick()" data-ar="السلة 🛒" data-en="Cart 🛒">السلة 🛒 <b id="cartCount">0</b></a> <!-- رابط السلة مع العدد -->
+  </nav> <!-- نهاية روابط التنقل -->
+</header> <!-- نهاية الهيدر -->
+<div class="tool-row"> <!-- شريط ادوات التحكم المطلوبة -->
+  <button onclick="toggleTheme();playClick()" data-ar="ليلي نهاري" data-en="Dark Light">ليلي نهاري</button> <!-- زر الوضع الليلي والنهاري -->
+  <button onclick="setLang('ar');playClick()">عربي</button> <!-- زر اللغة العربية -->
+  <button onclick="setLang('en');playClick()">English</button> <!-- زر اللغة الانجليزية -->
+  <button onclick="changeFont(1);playClick()">A+</button> <!-- زر تكبير الخط -->
+  <button onclick="changeFont(-1);playClick()">A-</button> <!-- زر تصغير الخط -->
+</div> <!-- نهاية شريط الادوات -->
+<main class="container"> <!-- بداية صفحة من نحن -->
+<section class="page-head section-card"><h1 data-ar="من نحن" data-en="About us">من نحن</h1><p data-ar="موسيقاتي متجر اردني يقدم الات موسيقية وخدمات صيانة واستشارة" data-en="MOSIQATI is a Jordanian store for instruments maintenance and advice">موسيقاتي متجر اردني يقدم الات موسيقية وخدمات صيانة واستشارة</p></section> <!-- تعريف المتجر -->
+<section class="grid three">
+
+  <div class="card">
+    <img src="assets\561a438ff404925b77ce0142ea292dac.jpg" alt="صورة 1">
+    <h3 data-ar="هويتنا" data-en="Our Identity">
+هويتنا
+</h3>
+<p
+data-ar="نحن فاخرون بما وصل اليه متجر موسيقاتي حيث اصبح من اكبر متاجر الالات الموسيقية في الاردن بعد عشر سنوات من الافتتاح حيث يضم اكثر من 400 منتج من 60 علامة تجارية ويضم فريقنا خبراء موسيقين يقدمون الاستشارة والدروس بالموسيقى، رحلة ابداع تبدأ معنا"
+data-en="We are proud of what MOSIQATI has achieved. It has become one of the largest musical instrument stores in Jordan after ten years of success. The store includes more than 400 products from 60 brands, with music experts providing consultations and music lessons. Your creative journey starts with us.">
+نحن فاخرون بما وصل اليه متجر موسيقاتي حيث اصبح من اكبر متاجر الالات الموسيقية في الاردن بعد عشر سنوات من الافتتاح حيث يضم اكثر من 400 منتج من 60 علامة تجارية ويضم فريقنا خبراء موسيقين يقدمون الاستشارة والدروس بالموسيقى، رحلة ابداع تبدأ معنا
+</p>
+  </div>
+
+  <div class="card">
+    <img src="assets\photo_5812074621581331829_y.jpg" alt="صورة 2">
+   <h3 data-ar="المؤسس والمدير" data-en="Founder and Manager">
+المؤسس والمدير
+</h3>
+<p
+data-ar="صالح الأفندي صاحب فكرة متجر موسيقاتي ويملك خبرة 25 عام في الموسيقى"
+data-en="Saleh Al-Afandi is the founder of MOSIQATI store and has more than 25 years of experience in music.">
+صالح الأفندي صاحب فكرة متجر موسيقاتي ويملك خبرة 25 عام في الموسيقى
+</p>
+  </div>
+
+  <div class="card">
+    <img src="assets\photo_5812074621581331832_y.jpg" alt="صورة 3">
+    <h3 data-ar="فن الصيانة" data-en="Maintenance Art">
+فن الصيانة
+</h3>
+<p
+data-ar="مهند الحازم خبير في ترميم وصيانة الآلات الموسيقية بخبرة تتجاوز 30 عام"
+data-en="Expert in restoring and maintaining musical instruments">
+مهند الحازم خبير في ترميم وصيانة الآلات الموسيقية بخبرة تتجاوز 30 عام
+</p>
+
+  </div>
+
+</section></main> <!-- نهاية من نحن -->
+<footer class="footer"> <!-- بداية الفوتر -->
+  <h2 data-ar="موسيقاتي MOSIQATI" data-en="MOSIQATI Music Store">موسيقاتي MOSIQATI</h2> <!-- اسم المتجر في الفوتر -->
+  <p data-ar="متجر اردني للالات الموسيقية والهدايا والخدمات الفنية" data-en="Jordanian store for musical instruments gifts and technical services">متجر اردني للالات الموسيقية والهدايا والخدمات الفنية</p> <!-- وصف قصير -->
+  <div class="social"> <!-- روابط تواصل شكلية -->
+    <span>Facebook</span><span>Instagram</span><span>WhatsApp</span> <!-- اسماء المنصات -->
+  </div> <!-- نهاية روابط التواصل -->
+</footer> <!-- نهاية الفوتر -->
+<audio id="clickSound" src="assets/c2.mp3" preload="auto"></audio> <!-- صوت قصير عند الضغط -->
+<audio id="heroMusic" src="assets/hhh.mp3" preload="auto" loop></audio> <!-- موسيقى اختيارية للعرض -->
+<script src="script.js"></script> <!-- ربط ملف الجافاسكربت -->
+</body> <!-- نهاية جسم الصفحة -->
+</html> <!-- نهاية الصفحة -->

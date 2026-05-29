@@ -1,0 +1,74 @@
+<!DOCTYPE html> <!-- تعريف نوع ملف الصفحة -->
+<html lang="ar" dir="rtl"> <!-- بداية الصفحة باللغة العربية -->
+<head> <!-- بداية معلومات الصفحة -->
+  <meta charset="UTF-8"> <!-- دعم اللغة العربية والانجليزية -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- يجعل الموقع مناسب للموبايل واللاب -->
+  <title>MOSIQATI | Offers</title> <!-- عنوان الصفحة في المتصفح -->
+  <link rel="stylesheet" href="style.css"> <!-- ربط ملف التصميم -->
+</head> <!-- نهاية معلومات الصفحة -->
+<body> <!-- بداية جسم الصفحة -->
+<div class="top-bar" data-ar="🎵 توصيل داخل الاردن | عروض خاصة | استشارات وصيانة" data-en="🎵 Delivery in Jordan | Special offers | Advice and maintenance">🎵 توصيل داخل الاردن | عروض خاصة | استشارات وصيانة</div> <!-- شريط علوي مثل مواقع المتاجر الاحترافية -->
+<header class="site-header"> <!-- بداية الهيدر الثابت -->
+  <a class="brand" href="index.html" onclick="playClick()"> <!-- رابط الشعار يرجع للرئيسية -->
+    <img src="assets/لقطة شاشة 2026-05-25 151001.png" alt="شعار موسيقاتي"> <!-- صورة الشعار -->
+    <span data-ar="موسيقاتي" data-en="MOSIQATI">موسيقاتي</span> <!-- اسم المتجر بلغتين -->
+  </a> <!-- نهاية الشعار -->
+  <input id="searchBox" class="search" type="search" onkeyup="searchCards()" placeholder="ابحث عن منتج او خدمة" data-ph-ar="ابحث عن منتج او خدمة" data-ph-en="Search for product or service"> <!-- مربع البحث -->
+  <button class="menu-btn" onclick="toggleMenu();playClick()">☰</button> <!-- زر قائمة الجوال -->
+  <nav id="mainNav" class="main-nav"> <!-- روابط التنقل -->
+    <a href="index.html" onclick="playClick()" data-ar="الرئيسية" data-en="Home">الرئيسية</a> <!-- رابط الرئيسية -->
+    <a href="store.html" onclick="playClick()" data-ar="المتجر" data-en="Store">المتجر</a> <!-- رابط المتجر -->
+    <a href="gifts.html" onclick="playClick()" data-ar="الهدايا" data-en="Gifts">الهدايا</a> <!-- رابط الهدايا -->
+    <a href="offers.html" onclick="playClick()" data-ar="العروض" data-en="Offers">العروض</a> <!-- رابط العروض -->
+    <a href="services.html" onclick="playClick()" data-ar="الخدمات" data-en="Services">الخدمات</a> <!-- رابط الخدمات -->
+    <a href="about.html" onclick="playClick()" data-ar="من نحن" data-en="About">من نحن</a> <!-- رابط من نحن -->
+    <a href="contact.html" onclick="playClick()" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a> <!-- رابط التواصل -->
+    <a href="cart.html" onclick="playClick()" data-ar="السلة 🛒" data-en="Cart 🛒">السلة 🛒 <b id="cartCount">0</b></a> <!-- رابط السلة مع العدد -->
+  </nav> <!-- نهاية روابط التنقل -->
+</header> <!-- نهاية الهيدر -->
+<div class="tool-row"> <!-- شريط ادوات التحكم المطلوبة -->
+  <button onclick="toggleTheme();playClick()" data-ar="ليلي نهاري" data-en="Dark Light">ليلي نهاري</button> <!-- زر الوضع الليلي والنهاري -->
+  <button onclick="setLang('ar');playClick()">عربي</button> <!-- زر اللغة العربية -->
+  <button onclick="setLang('en');playClick()">English</button> <!-- زر اللغة الانجليزية -->
+  <button onclick="changeFont(1);playClick()">A+</button> <!-- زر تكبير الخط -->
+  <button onclick="changeFont(-1);playClick()">A-</button> <!-- زر تصغير الخط -->
+</div> <!-- نهاية شريط الادوات -->
+<main class="container"> <!-- بداية صفحة العروض -->
+<section class="page-head section-card"><h1 data-ar="العروض الخاصة" data-en="Special offers">العروض الخاصة</h1><p data-ar="تخفيضات وباقات حصرية مثل مواقع Sweetwater و Guitar Center" data-en="Discounts and bundles inspired by music retail websites">تخفيضات وباقات حصرية مثل مواقع Sweetwater و Guitar Center</p></section> <!-- رأس العروض -->
+<div class="grid four"> <!-- شبكة المنتجات -->
+<article class="card product searchable"> <!-- بطاقة منتج -->
+  <img src="assets\e1ed53176fced393f953dd4406089f01.jpg" alt="باقة المبتدئ"> <!-- صورة المنتج -->
+  <h3 data-ar="باقة المبتدئ" data-en="Starter Bundle">باقة المبتدئ</h3> <!-- اسم المنتج -->
+  <p data-ar="قيثار مع اكسسوارات وخصم خاص" data-en="Guitar with accessories and discount">قيثار مع اكسسوارات وخصم خاص</p> <!-- وصف المنتج -->
+  <strong>99 JOD</strong> <!-- السعر بالدينار -->
+  <button onclick="addCart('باقة المبتدئ', 99, 'assets/13.jpg');playClick()" data-ar="اضف للسلة" data-en="Add to cart">اضف للسلة</button> <!-- زر يضيف المنتج للسلة -->
+</article> <!-- نهاية بطاقة المنتج -->
+<article class="card product searchable"> <!-- بطاقة منتج -->
+  <img src="assets\d90fcdee289c7d91d3d0a39060c441c8.jpg" alt="باقة الاستوديو"> <!-- صورة المنتج -->
+  <h3 data-ar="باقة الاستوديو" data-en="Studio Bundle">باقة الاستوديو</h3> <!-- اسم المنتج -->
+  <p data-ar="مايك وسماعات ومعدات تسجيل" data-en="Mic headphones and recording gear">مايك وسماعات ومعدات تسجيل</p> <!-- وصف المنتج -->
+  <strong>149 JOD</strong> <!-- السعر بالدينار -->
+  <button onclick="addCart('باقة الاستوديو', 149, 'assets/14.jpg');playClick()" data-ar="اضف للسلة" data-en="Add to cart">اضف للسلة</button> <!-- زر يضيف المنتج للسلة -->
+</article> <!-- نهاية بطاقة المنتج -->
+<article class="card product searchable"> <!-- بطاقة منتج -->
+  <img src="assets\1495a1f1f47289536dcb74c85af83a86.jpg" alt="خصم العود"> <!-- صورة المنتج -->
+  <h3 data-ar="خصم العود" data-en="Oud Deal">خصم العود</h3> <!-- اسم المنتج -->
+  <p data-ar="خصم خاص على العود الشرقي" data-en="Special discount on oriental oud">خصم خاص على العود الشرقي</p> <!-- وصف المنتج -->
+  <strong>120 JOD</strong> <!-- السعر بالدينار -->
+  <button onclick="addCart('خصم العود', 120, 'assets/15.jpg');playClick()" data-ar="اضف للسلة" data-en="Add to cart">اضف للسلة</button> <!-- زر يضيف المنتج للسلة -->
+</article> <!-- نهاية بطاقة المنتج -->
+</div> <!-- نهاية شبكة المنتجات -->
+
+</main> <!-- نهاية العروض -->
+<footer class="footer"> <!-- بداية الفوتر -->
+  <h2 data-ar="موسيقاتي MOSIQATI" data-en="MOSIQATI Music Store">موسيقاتي MOSIQATI</h2> <!-- اسم المتجر في الفوتر -->
+  <p data-ar="متجر اردني للالات الموسيقية والهدايا والخدمات الفنية" data-en="Jordanian store for musical instruments gifts and technical services">متجر اردني للالات الموسيقية والهدايا والخدمات الفنية</p> <!-- وصف قصير -->
+  <div class="social"> <!-- روابط تواصل شكلية -->
+    <span>Facebook</span><span>Instagram</span><span>WhatsApp</span> <!-- اسماء المنصات -->
+  </div> <!-- نهاية روابط التواصل -->
+</footer> <!-- نهاية الفوتر -->
+<audio id="clickSound" src="assets/c2.mp3" preload="auto"></audio> <!-- صوت قصير عند الضغط -->
+<audio id="heroMusic" src="assets/hhh.mp3" preload="auto" loop></audio> <!-- موسيقى اختيارية للعرض -->
+<script src="script.js"></script> <!-- ربط ملف الجافاسكربت -->
+</body> <!-- نهاية جسم الصفحة -->
+</html> <!-- نهاية الصفحة -->
